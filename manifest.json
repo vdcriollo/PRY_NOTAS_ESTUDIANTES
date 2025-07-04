@@ -1,0 +1,9 @@
+{
+    "name": "STUDENT PWA",
+    "short_name": "STUDENT PWA",
+    "description": "STUEDNE  ES[E",
+    "start_url": "index.html",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#000000"
+}

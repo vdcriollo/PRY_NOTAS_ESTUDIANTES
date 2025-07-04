@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        NOTAS DE ESTUDIANTES
+    </title>
+
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="manifest" href="manifest.json">
+    
+
+</head>
+<body>
+    <h1>
+        NOTAS DE ESTUDIANTES
+    </h1>
+    <hr>
+    <form id="notaForm">
+
+        <label for="txt_estudiante">Ingrese nombre completo del estudiante</label>
+        <input type="text" id="txt_estudiante" value="" required placeholder="Ana Arias">
+        <br>
+        <label for="txt_asignatura">Ingrese la asignatura</label>
+        <input type="text" id="txt_asignatura" value="" required placeholder="Pro. web">
+        <br>
+        <label for="txt_nota">Ingrese nota final</label>
+        <input type="text" id="txt_nota" value="" required placeholder="0.01">
+
+        <br>
+        <button type="submit">
+            Guardar
+        </button>
+        <br>
+        <hr>
+        <ul id="listaEstudiantes">
+           
+        </ul>
+
+    </form>
+
+    <script src="app.js"></script>
+
+    <script>
+        if('serviceWorker' in navigator){
+            navigator.serviceWorker.register('s_w.js');
+            console.log("server create")
+        }
+    </script>
+
+</body>
+</html>
