@@ -6,8 +6,13 @@ const archivosParaCachear = [
     '/index.html',
     '/style.css',
     '/manifest.json',
-    '/app.js'
+    '/app.js',
+    '/icono.png',
+    '/icono2.png'
 ];
+
+// consolo imprimir estoy aqui
+
 
 
 // evento que se ejecuta cuando se instala el service worker
