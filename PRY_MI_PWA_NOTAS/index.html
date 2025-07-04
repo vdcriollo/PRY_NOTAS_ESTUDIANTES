@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        MI NOTA PERSONAL CON PWA
+    </title>
+    <!-- hacer el llamado de nuestro style -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- hacer el llamado de nuestro manifest.json -->
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <h1>MIS NOTAS</h1>
+    <!-- textarea -->
+     <label id="labe_ingresar_tarea" for="nota">Ingresar/actualizar nota</label>
+     <br>
+    <textarea autofocus id="nota" rows="4" cols="50" placeholder="Escribe tu nota aquí..."></textarea>
+    <br>
+    <button onclick="guardarNota(this)">Guardar nota</button>
+    <p id="mensaje"></p>
+
+    <!-- logica para guardar tarea en localstorage -->
+    <script src="app.js"></script>
+    <script>
+        // registar service worker
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('service-worker.js')
+                .then(function(registration) {
+                    console.log('Service Worker registrado con éxito:', registration);
+                })
+                .catch(function(error) {
+                    console.error('Error al registrar el Service Worker:', error);
+                });
+            });
+        } else {
+            console.warn('Service Workers no son soportados en este navegador.');
+        }
+    </script>
+</body>
+</html>
